@@ -1,13 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
 import DeleteIcon from '@material-ui/icons/Delete';
 
 const useStyles = makeStyles({
   root: {
-    background: 'white',
+    background: 'grey',
     border: 0,
     borderRadius: 3,
     color: 'black',
@@ -24,11 +23,12 @@ const ContactItem = ({ name, number, onClick }) => {
     <>
       {name}: {number}
       <Button
+        type="button"
         variant="contained"
         color="secondary"
         className={classes.root}
         startIcon={<DeleteIcon />}
-        onclick={onclick}
+        onClick={onClick}
       >
         Delete
       </Button>
